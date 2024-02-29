@@ -27,7 +27,7 @@ const AddStudent = () => {
       <form className="flex flex-col text-lg w-full items-center gap-3">
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Name"  
           className="outline-none border-2 border-black rounded-md py-2 px-5 w-1/2"
           onChange={(e) => setName(e.target.value)}
           value={name}

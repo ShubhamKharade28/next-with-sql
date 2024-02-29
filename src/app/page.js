@@ -3,7 +3,7 @@ import StudentList from "./components/student-list";
 
 const Home = () => {
   return (
-    <main className="flex items-center justify-around w-screen min-h-screen px-32">
+    <main className="flex sm:flex-col md:flex-row items-center justify-around w-screen min-h-screen px-32">
       <AddStudent />
       <StudentList />
     </main>

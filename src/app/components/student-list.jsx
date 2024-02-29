@@ -1,8 +1,10 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const StudentList = () => {
   const [students, setStudents] = useState([]);
+  const [isEditable, setIsEditable] = useState(false);
 
   useEffect(() => {
     getData();
@@ -39,6 +41,8 @@ const StudentList = () => {
     }
   };
 
+
+
   return (
     <div className="w-1/2 flex flex-col items-center justify-center gap-7">
       <h1 className="text-2xl font-bold relative">Students
@@ -70,6 +74,12 @@ const StudentList = () => {
                   <span className="font-bold bg-red-600 px-2 pb-1 rounded-lg text-white text-lg cursor-pointer hover:bg-red-400 ">
                     x
                   </span>
+                </td>
+                <td>
+                  <Link
+                    href={`/update-student/${student.id}`}
+                    className="font-bold bg-green-600 px-2 pb-1 rounded-lg text-white text-lg cursor-pointer hover:bg-green-400 "
+                  >Edit</Link>
                 </td>
               </tr>
             );
